@@ -64,3 +64,12 @@ function ArrayPessoasMenorIdade(pessoas) {
     });
     console.log(menorIdade);
 }
+
+
+//[SP04] 7 - Encontrar uma pessoa de maior
+function PessoaMaiorIdade(pessoas) {
+    let maiorIdade = pessoas.find(function(pessoa) {
+        return pessoa.idade >= 18
+    });
+    console.log(maiorIdade);
+}
