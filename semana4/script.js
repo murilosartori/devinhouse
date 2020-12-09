@@ -73,3 +73,12 @@ function PessoaMaiorIdade(pessoas) {
     });
     console.log(maiorIdade);
 }
+
+
+//[SP04] 8 - Multiplicação de Valores da Lista
+function MultiplicacaoArray(...valores) {
+    let multiplicacao = valores.reduce(function(mult, valor) {
+        return mult * valor;
+    });
+    console.log(multiplicacao);
+}
