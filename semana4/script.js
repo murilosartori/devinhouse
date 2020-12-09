@@ -10,3 +10,12 @@ function media(arrayNotas) {
         console.log('A média das notas é: ' + media);
     }
 }
+
+
+//[SP04] - 2 - Quadrado de valores
+function quadrado(...arrayQuadrado) {
+    let quadrado = arrayQuadrado.map(function(num) {
+        return Math.pow(num, 2);
+    });
+    console.log(quadrado);
+}
