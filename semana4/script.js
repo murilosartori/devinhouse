@@ -22,7 +22,7 @@ function quadrado(...arrayQuadrado) {
 
 
 //[SP04] - 3 - Verificação de Maioridade de Pessoas
-let pessoas = [
+let arrayPessoas = [
     { nome: 'João', idade: 15, telefone: '(16) 99999-9999', profissao: 'Estudante' },
     { nome: 'Maria', idade: 68, telefone: '(16) 99999-9999', profissao: 'Aposentada' },
     { nome: 'Pedro', idade: 34, telefone: '(16) 99999-9999', profissao: 'Programador' },
@@ -31,7 +31,7 @@ let pessoas = [
     { nome: 'Renata', idade: 21, telefone: '(16) 99999-9999', profissao: 'Programador' },
     { nome: 'Marcos', idade: 14, telefone: '(16) 99999-9999', profissao: '' },
 ]
-function maioridade() {
+function maioridade(pessoas) {
     let pessoaMaioridade = pessoas.some(function(pessoa) {
         return pessoa.idade >= 18;
     });
