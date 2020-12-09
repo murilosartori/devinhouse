@@ -55,3 +55,12 @@ function ArrayNomePessoas(pessoas) {
     });
     console.log(nomePessoas);
 }
+
+
+//[SP04] 6 - Encontrar as pessoas menores de 18 anos
+function ArrayPessoasMenorIdade(pessoas) {
+    let menorIdade = pessoas.filter(function(pessoa) {
+        return pessoa.idade < 18;
+    });
+    console.log(menorIdade);
+}
