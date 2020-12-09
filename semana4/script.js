@@ -46,3 +46,12 @@ function MesmaProfissao(pessoas) {
     });
     console.log('Todas as pessoas são programadoras: ' + mesmaProfissao);
 }
+
+
+//[SP04] 5 - Listar o nome das pessoas
+function ArrayNomePessoas(pessoas) {
+    let nomePessoas = pessoas.map(function(pessoa) {
+        return pessoa.nome;
+    });
+    console.log(nomePessoas);
+}
