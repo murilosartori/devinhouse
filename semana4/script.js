@@ -37,3 +37,12 @@ function maioridade(pessoas) {
     });
     console.log('Tem pessoal maior de idade: ' + pessoaMaioridade);
 }
+
+
+//[SP04] 4 - Verificação de Profissão
+function MesmaProfissao(pessoas) {
+    let mesmaProfissao = pessoas.every(function(pessoa) {
+        pessoa.profissao === 'Programador';
+    });
+    console.log('Todas as pessoas são programadoras: ' + mesmaProfissao);
+}
