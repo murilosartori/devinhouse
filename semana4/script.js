@@ -19,3 +19,21 @@ function quadrado(...arrayQuadrado) {
     });
     console.log(quadrado);
 }
+
+
+//[SP04] - 3 - Verificação de Maioridade de Pessoas
+let pessoas = [
+    { nome: 'João', idade: 15, telefone: '(16) 99999-9999', profissao: 'Estudante' },
+    { nome: 'Maria', idade: 68, telefone: '(16) 99999-9999', profissao: 'Aposentada' },
+    { nome: 'Pedro', idade: 34, telefone: '(16) 99999-9999', profissao: 'Programador' },
+    { nome: 'Carlos', idade: 10, telefone: '(16) 99999-9999', profissao: 'Estudante' },
+    { nome: 'Rita', idade: 49, telefone: '(16) 99999-9999', profissao: 'Bancária' },
+    { nome: 'Renata', idade: 21, telefone: '(16) 99999-9999', profissao: 'Programador' },
+    { nome: 'Marcos', idade: 14, telefone: '(16) 99999-9999', profissao: '' },
+]
+function maioridade() {
+    let pessoaMaioridade = pessoas.some(function(pessoa) {
+        return pessoa.idade >= 18;
+    });
+    console.log('Tem pessoal maior de idade: ' + pessoaMaioridade);
+}
