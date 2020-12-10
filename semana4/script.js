@@ -90,3 +90,7 @@ const apresentacao = (nome, idade) => console.log(`Olá, eu sou ${nome}, e tenho
 
 //[SP04] 11 - Cálculo de área de um Retângulo
 const areaRetangulo = (altura, largura) => console.log(Number(altura) * Number(largura));
+
+
+//[SP04] 12 - Impressão de Endereço
+const endereco = (bairro, cidade, estado) => console.log(`${bairro}, ${cidade} - ${estado}`);
