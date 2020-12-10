@@ -82,3 +82,7 @@ function MultiplicacaoArray(...valores) {
     });
     console.log(multiplicacao);
 }
+
+
+//[SP04] 9 - Apresentação de usuário
+const apresentacao = (nome, idade) => console.log(`Olá, eu sou ${nome}, e tenho ${idade} anos`);
