@@ -115,3 +115,10 @@ const CidadeConcatenada = cidades => cidades.map(cidade => `${cidade.cidade} - $
 
 //[SP04] 15 - Verificar existência de Estado
 const ExisteEstado = cidades => console.log(`Existe cidade do RS: ${cidades.some(cidade => cidade.estado === 'RS')}`);
+
+
+//[SP04] 16 - Desmontar entidade
+const DesmontarEntidade = cidades => {
+    const [{cidade, estado}, ...demais] = arrayCidades
+    console.log(`${cidade} - ${estado}`);
+};
