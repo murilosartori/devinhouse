@@ -86,3 +86,7 @@ function MultiplicacaoArray(...valores) {
 
 //[SP04] 9 - Apresentação de usuário
 const apresentacao = (nome, idade) => console.log(`Olá, eu sou ${nome}, e tenho ${idade} anos`);
+
+
+//[SP04] 11 - Cálculo de área de um Retângulo
+const areaRetangulo = (altura, largura) => console.log(Number(altura) * Number(largura));
