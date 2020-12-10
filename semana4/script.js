@@ -122,3 +122,12 @@ const DesmontarEntidade = cidades => {
     const [{cidade, estado}, ...demais] = arrayCidades
     console.log(`${cidade} - ${estado}`);
 };
+
+
+//[SP04] 17 - Ranking de Livros mais Vendidos
+const RankingLivros = (primeiro, segundo, terceiro, ...outros) => {
+    console.log(`O livro mais vendido é: ${primeiro}`);
+    console.log(`O segundo livro mais vendido é: ${segundo}`);
+    console.log(`O terceiro livro mais vendido é: ${terceiro}`);
+    console.log(`Demais livros: ${outros}`);
+};
