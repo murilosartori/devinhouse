@@ -94,3 +94,16 @@ const areaRetangulo = (altura, largura) => console.log(Number(altura) * Number(l
 
 //[SP04] 12 - Impressão de Endereço
 const endereco = (bairro, cidade, estado) => console.log(`${bairro}, ${cidade} - ${estado}`);
+
+
+//[SP04] 13 - Filtrar Cidades
+let arrayCidades = [
+    { cidade: 'Ribeirão Preto', estado: 'SP'},
+    { cidade: 'Florianópolis', estado: 'SC'},
+    { cidade: 'Blumenau', estado: 'SC'},
+    { cidade: 'Vitória', estado: 'ES'},
+    { cidade: 'Rio Branco   ', estado: 'AC'},
+    { cidade: 'Porto Alegre', estado: 'RS'},
+    { cidade: 'Natal', estado: 'RN'}
+]
+const cidadesSC = cidades => cidades.filter(cidade => cidade.estado === 'SC');
