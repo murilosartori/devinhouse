@@ -111,3 +111,7 @@ const cidadesSC = cidades => cidades.filter(cidade => cidade.estado === 'SC');
 
 //[SP04] 14 - Transformar cidades em uma String concatenada
 const CidadeConcatenada = cidades => cidades.map(cidade => `${cidade.cidade} - ${cidade.estado}`);
+
+
+//[SP04] 15 - Verificar existência de Estado
+const ExisteEstado = cidades => console.log(`Existe cidade do RS: ${cidades.some(cidade => cidade.estado === 'RS')}`);
