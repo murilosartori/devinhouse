@@ -102,8 +102,12 @@ let arrayCidades = [
     { cidade: 'Florianópolis', estado: 'SC'},
     { cidade: 'Blumenau', estado: 'SC'},
     { cidade: 'Vitória', estado: 'ES'},
-    { cidade: 'Rio Branco   ', estado: 'AC'},
+    { cidade: 'Rio Branco', estado: 'AC'},
     { cidade: 'Porto Alegre', estado: 'RS'},
     { cidade: 'Natal', estado: 'RN'}
 ]
 const cidadesSC = cidades => cidades.filter(cidade => cidade.estado === 'SC');
+
+
+//[SP04] 14 - Transformar cidades em uma String concatenada
+const CidadeConcatenada = cidades => cidades.map(cidade => `${cidade.cidade} - ${cidade.estado}`);
