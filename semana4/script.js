@@ -88,6 +88,25 @@ function MultiplicacaoArray(...valores) {
 const apresentacao = (nome, idade) => console.log(`Olá, eu sou ${nome}, e tenho ${idade} anos`);
 
 
+//[SP04] 10 - Soma com resultado Par
+function SomarValor(valor1, valor2) {
+    let soma = valor1 + valor2;
+    return new Promise((resolve, reject) => {
+        if (soma % 2 === 0) {
+            resolve(soma);
+        } else {
+            reject(`O resultado da soma é ${soma}, por ser um número ímpar não foi aceito.`);
+        }
+    })
+}
+SomarValor(6, 8) //Exemplo com um número par
+    .then(retorno => console.log(`A soma é: ${retorno}`))
+    .catch(mensagem => console.log(mensagem));
+SomarValor(7, 4) //Exemplo com um número ímpar
+    .then(retorno => console.log(`A soma é: ${retorno}`))
+    .catch(mensagem => console.log(mensagem));
+
+
 //[SP04] 11 - Cálculo de área de um Retângulo
 const areaRetangulo = (altura, largura) => console.log(Number(altura) * Number(largura));
 
