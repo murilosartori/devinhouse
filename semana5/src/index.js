@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Esqueleto from './component/Esqueleto'
 import reportWebVitals from './reportWebVitals';
+import Home from './pages/Home';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Esqueleto />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 );
