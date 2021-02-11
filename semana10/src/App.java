@@ -1,6 +1,6 @@
 // import java.util.Locale;
 import java.util.Scanner;
-import java.util.Random;
+// import java.util.Random;
 // import java.util.Calendar;
 
 public class App {
@@ -67,9 +67,21 @@ public class App {
         // }
 
         //Exercicio 12
+        // Scanner dados = new Scanner(System.in);
+        // System.out.print("Insira um número inteiro: ");
+        // int numero = dados.nextInt();
+        // System.out.printf("O número informado é %s", (numero % 2 == 0 ? "PAR" : "ÍMPAR"));
+
+        //Exercicio 13
         Scanner dados = new Scanner(System.in);
-        System.out.print("Insira um número inteiro: ");
-        int numero = dados.nextInt();
-        System.out.printf("O número informado é %s", (numero % 2 == 0 ? "PAR" : "ÍMPAR"));
+        System.out.println("Insira as 3 notas do aluno abaixo (separar por ponto as casas decimais)");
+        System.out.print("Insira a primeira Nota: ");
+        double nota1 = Double.parseDouble(dados.nextLine());
+        System.out.print("Insira a segunda Nota: ");
+        double nota2 = Double.parseDouble(dados.nextLine());
+        System.out.print("Insira a terceira Nota: ");
+        double nota3 = Double.parseDouble(dados.nextLine());
+        double mediaFinal = (nota1 + nota2 + nota3) / 3;
+        System.out.printf("Média final do aluno: %.2f", mediaFinal);
     }
 }
