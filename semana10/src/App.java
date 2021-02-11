@@ -1,5 +1,5 @@
-import java.util.Locale;
-
+// import java.util.Locale;
+import java.util.Scanner;
 // import java.util.Random;
 // import java.util.Calendar;
 
@@ -26,7 +26,15 @@ public class App {
         // }
         
         //Exercicio 5
-        Locale local = Locale.getDefault();
-        System.out.println(local.getDisplayLanguage());
+        // Locale local = Locale.getDefault();
+        // System.out.println(local.getDisplayLanguage());
+
+        //Exercicio 7
+        Scanner dados = new Scanner(System.in);
+        System.out.print("Qual o seu sobrenome: ");
+        String sobrenome = dados.nextLine();
+        System.out.print("Qual o seu nome: ");
+        String nome = dados.nextLine();
+        System.out.printf("%nBem vindo %s %s",nome, sobrenome);
     }
 }
