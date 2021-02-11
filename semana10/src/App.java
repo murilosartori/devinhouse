@@ -73,15 +73,47 @@ public class App {
         // System.out.printf("O número informado é %s", (numero % 2 == 0 ? "PAR" : "ÍMPAR"));
 
         //Exercicio 13
+        // Scanner dados = new Scanner(System.in);
+        // System.out.println("Insira as 3 notas do aluno abaixo (separar por ponto as casas decimais)");
+        // System.out.print("Insira a primeira Nota: ");
+        // double nota1 = Double.parseDouble(dados.nextLine());
+        // System.out.print("Insira a segunda Nota: ");
+        // double nota2 = Double.parseDouble(dados.nextLine());
+        // System.out.print("Insira a terceira Nota: ");
+        // double nota3 = Double.parseDouble(dados.nextLine());
+        // double mediaFinal = (nota1 + nota2 + nota3) / 3;
+        // System.out.printf("Média final do aluno: %.2f", mediaFinal);
+
+        //Exercicio 14
         Scanner dados = new Scanner(System.in);
-        System.out.println("Insira as 3 notas do aluno abaixo (separar por ponto as casas decimais)");
-        System.out.print("Insira a primeira Nota: ");
-        double nota1 = Double.parseDouble(dados.nextLine());
-        System.out.print("Insira a segunda Nota: ");
-        double nota2 = Double.parseDouble(dados.nextLine());
-        System.out.print("Insira a terceira Nota: ");
-        double nota3 = Double.parseDouble(dados.nextLine());
-        double mediaFinal = (nota1 + nota2 + nota3) / 3;
-        System.out.printf("Média final do aluno: %.2f", mediaFinal);
+        System.out.println("Em \"Operação\" escreva uma das opções a seguir: somar, subtrair, multiplicar ou dividir");
+        System.out.print("Número 1: ");
+        double num1 = Double.parseDouble(dados.nextLine());
+        System.out.print("Número 2: ");
+        double num2 = Double.parseDouble(dados.nextLine());
+        System.out.print("Operação: ");
+        String operacao = dados.nextLine();
+        double resultado = 0;
+        boolean erro = false;
+        if (operacao.equals("somar")) {
+            resultado = num1 + num2;
+        } else if (operacao.equals("subtrair")) {
+            resultado = num1 - num2;
+        } else if (operacao.equals("multiplicar")) {
+            resultado = num1 * num2;
+        } else if (operacao.equals("dividir")) {
+            if (num2 > 0) {
+                resultado = num1 / num2;
+            } else {
+                erro = true;
+                System.out.print("Não é possível dividir por 0(zero).");
+            }
+        } else {
+            erro = true;
+            System.out.print("Operação não encontrada.");
+        }
+        if (!erro) {
+            System.out.printf("Média final do aluno: %.2f", resultado);
+        }
     }
 }
