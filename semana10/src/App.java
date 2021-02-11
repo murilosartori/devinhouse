@@ -30,11 +30,18 @@ public class App {
         // System.out.println(local.getDisplayLanguage());
 
         //Exercicio 7
+        // Scanner dados = new Scanner(System.in);
+        // System.out.print("Qual o seu sobrenome: ");
+        // String sobrenome = dados.nextLine();
+        // System.out.print("Qual o seu nome: ");
+        // String nome = dados.nextLine();
+        // System.out.printf("%nBem vindo %s %s",nome, sobrenome);
+
+        //Exercicio 8
         Scanner dados = new Scanner(System.in);
-        System.out.print("Qual o seu sobrenome: ");
-        String sobrenome = dados.nextLine();
-        System.out.print("Qual o seu nome: ");
-        String nome = dados.nextLine();
-        System.out.printf("%nBem vindo %s %s",nome, sobrenome);
+        System.out.print("Informe um número com casas decimais: ");
+        double numDecimal = Double.parseDouble(dados.nextLine());
+        int resultInteiro = (int) numDecimal;
+        System.out.printf("O valor inteiro do número informado: %d", resultInteiro);
     }
 }
