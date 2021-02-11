@@ -1,6 +1,6 @@
 // import java.util.Locale;
 import java.util.Scanner;
-// import java.util.Random;
+import java.util.Random;
 // import java.util.Calendar;
 
 public class App {
@@ -45,9 +45,25 @@ public class App {
         // System.out.printf("O valor inteiro do número informado: %d", resultInteiro);
 
         //Exercicio 9
+        // Scanner dados = new Scanner(System.in);
+        // System.out.print("Informe uma palavra qualquer: ");
+        // String palavra = dados.nextLine();
+        // System.out.printf("A palavra informada possui %s caracteres", palavra.length());
+
+        //Exercicio 10
         Scanner dados = new Scanner(System.in);
-        System.out.print("Informe uma palavra qualquer: ");
-        String palavra = dados.nextLine();
-        System.out.printf("A palavra informada possui %s caracteres", palavra.length());
+        System.out.print("Adivinhe qual número de 1 a 5 eu estou pensando: ");
+        int numero = dados.nextInt();
+        if (numero >= 1 && numero <= 5) {
+            Random aleatorio = new Random();
+            int numAleatorio = aleatorio.nextInt(6);
+            if (numAleatorio == numero) {
+                System.out.print("Você acertou!");
+            } else {
+                System.out.printf("Você errou, o número correto era %d", numAleatorio);
+            }
+        } else {
+            System.out.print("Solicitei um número entre 1 e 5!");
+        }
     }
 }
