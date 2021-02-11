@@ -38,10 +38,16 @@ public class App {
         // System.out.printf("%nBem vindo %s %s",nome, sobrenome);
 
         //Exercicio 8
+        // Scanner dados = new Scanner(System.in);
+        // System.out.print("Informe um número com casas decimais: ");
+        // double numDecimal = Double.parseDouble(dados.nextLine());
+        // int resultInteiro = (int) numDecimal;
+        // System.out.printf("O valor inteiro do número informado: %d", resultInteiro);
+
+        //Exercicio 9
         Scanner dados = new Scanner(System.in);
-        System.out.print("Informe um número com casas decimais: ");
-        double numDecimal = Double.parseDouble(dados.nextLine());
-        int resultInteiro = (int) numDecimal;
-        System.out.printf("O valor inteiro do número informado: %d", resultInteiro);
+        System.out.print("Informe uma palavra qualquer: ");
+        String palavra = dados.nextLine();
+        System.out.printf("A palavra informada possui %s caracteres", palavra.length());
     }
 }
