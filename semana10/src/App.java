@@ -141,27 +141,47 @@ public class App {
         //     System.out.printf("Média final do aluno: %.2f", resultado);
         // }
 
-        //Exercicio 15
+        //Exercicio 16
+        // Scanner dados = new Scanner(System.in);
+        // System.out.println("Calculadora de PA ou PG");
+        // System.out.print("Insira o valor inicial: ");
+        // int num = Integer.parseInt(dados.nextLine());
+        // System.out.print("Insira o valora da raiz: ");
+        // int raiz = Integer.parseInt(dados.nextLine());
+        // System.out.print("Você deseja calcular os 10 primeiros resultados de uma PA ou PG: ");
+        // String operacao = dados.nextLine();
+        // String resultado = String.valueOf(num);
+        // if (operacao.equalsIgnoreCase("PA")) {
+        //     for (int pa = 1; pa < 10; pa++){
+        //         num = num + raiz;
+        //         resultado += ", " + String.valueOf(num);
+        //     }
+        // } else if (operacao.equalsIgnoreCase("PG")) {
+        //     for (int pa = 1; pa < 10; pa++){
+        //         num = num * raiz;
+        //         resultado += ", " + String.valueOf(num);
+        //     }
+        // }
+        // System.out.printf("O resultado da operação \"%s\" foi: %s", operacao, resultado);
+
+        //Exercicio 17
         Scanner dados = new Scanner(System.in);
-        System.out.println("Calculadora de PA ou PG");
-        System.out.print("Insira o valor inicial: ");
+        System.out.println("Vamos calcular o fatorial de um número de 0 a 10");
+        System.out.print("Insira um número inteiro de 0 a 10: ");
         int num = Integer.parseInt(dados.nextLine());
-        System.out.print("Insira o valora da raiz: ");
-        int raiz = Integer.parseInt(dados.nextLine());
-        System.out.print("Você deseja calcular os 10 primeiros resultados de uma PA ou PG: ");
-        String operacao = dados.nextLine();
-        String resultado = String.valueOf(num);
-        if (operacao.equalsIgnoreCase("PA")) {
-            for (int pa = 1; pa < 10; pa++){
-                num = num + raiz;
-                resultado += ", " + String.valueOf(num);
-            }
-        } else if (operacao.equalsIgnoreCase("PG")) {
-            for (int pa = 1; pa < 10; pa++){
-                num = num * raiz;
-                resultado += ", " + String.valueOf(num);
+        int decremento = 1;
+        String resultado = "";
+        if (num >= 0 && num <= 10) {
+            if (num == 0 || num == 1) {
+                resultado = "1";
+            } else {
+                for (int d = num; d > 1; d--) {
+                    decremento *= d;
+                }
+                resultado = String.valueOf(decremento);
             }
         }
-        System.out.printf("O resultado da operação \"%s\" foi: %s", operacao, resultado);
+        System.out.printf("O fatorial do número \"%d!\" é: %s", num, resultado);
+
     }
 }
