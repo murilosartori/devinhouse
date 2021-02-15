@@ -73,23 +73,23 @@ public class App {
         // }
 
         //Exercicio 11
-        Scanner dados = new Scanner(System.in);
-        System.out.print("Data de Nascimento (dd/mm/aaaa): ");
-        String dataNascimento = dados.nextLine();
-        DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        Date dataNascInput = null;
-        try {
-            dataNascInput= sdf.parse(dataNascimento);
-        } catch (Exception e) {}
-        Calendar dateOfBirth = new GregorianCalendar();
-        dateOfBirth.setTime(dataNascInput);
-        Calendar today = Calendar.getInstance();
-        int age = today.get(Calendar.YEAR) - dateOfBirth.get(Calendar.YEAR);
-        dateOfBirth.add(Calendar.YEAR, age);
-        if (today.before(dateOfBirth)) {
-            age--;
-        }
-        System.out.printf("Você tem %d anos", age);
+        // Scanner dados = new Scanner(System.in);
+        // System.out.print("Data de Nascimento (dd/mm/aaaa): ");
+        // String dataNascimento = dados.nextLine();
+        // DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        // Date dataNascInput = null;
+        // try {
+        //     dataNascInput= sdf.parse(dataNascimento);
+        // } catch (Exception e) {}
+        // Calendar dateOfBirth = new GregorianCalendar();
+        // dateOfBirth.setTime(dataNascInput);
+        // Calendar today = Calendar.getInstance();
+        // int age = today.get(Calendar.YEAR) - dateOfBirth.get(Calendar.YEAR);
+        // dateOfBirth.add(Calendar.YEAR, age);
+        // if (today.before(dateOfBirth)) {
+        //     age--;
+        // }
+        // System.out.printf("Você tem %d anos", age);
 
         //Exercicio 12
         // Scanner dados = new Scanner(System.in);
@@ -140,5 +140,28 @@ public class App {
         // if (!erro) {
         //     System.out.printf("Média final do aluno: %.2f", resultado);
         // }
+
+        //Exercicio 15
+        Scanner dados = new Scanner(System.in);
+        System.out.println("Calculadora de PA ou PG");
+        System.out.print("Insira o valor inicial: ");
+        int num = Integer.parseInt(dados.nextLine());
+        System.out.print("Insira o valora da raiz: ");
+        int raiz = Integer.parseInt(dados.nextLine());
+        System.out.print("Você deseja calcular os 10 primeiros resultados de uma PA ou PG: ");
+        String operacao = dados.nextLine();
+        String resultado = String.valueOf(num);
+        if (operacao.equalsIgnoreCase("PA")) {
+            for (int pa = 1; pa < 10; pa++){
+                num = num + raiz;
+                resultado += ", " + String.valueOf(num);
+            }
+        } else if (operacao.equalsIgnoreCase("PG")) {
+            for (int pa = 1; pa < 10; pa++){
+                num = num * raiz;
+                resultado += ", " + String.valueOf(num);
+            }
+        }
+        System.out.printf("O resultado da operação \"%s\" foi: %s", operacao, resultado);
     }
 }
