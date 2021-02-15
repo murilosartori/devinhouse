@@ -1,4 +1,10 @@
 // import java.util.Locale;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.Period;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 // import java.util.Random;
 // import java.util.Calendar;
@@ -66,6 +72,25 @@ public class App {
         //     System.out.print("Solicitei um número entre 1 e 5!");
         // }
 
+        //Exercicio 11
+        Scanner dados = new Scanner(System.in);
+        System.out.print("Data de Nascimento (dd/mm/aaaa): ");
+        String dataNascimento = dados.nextLine();
+        DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Date dataNascInput = null;
+        try {
+            dataNascInput= sdf.parse(dataNascimento);
+        } catch (Exception e) {}
+        Calendar dateOfBirth = new GregorianCalendar();
+        dateOfBirth.setTime(dataNascInput);
+        Calendar today = Calendar.getInstance();
+        int age = today.get(Calendar.YEAR) - dateOfBirth.get(Calendar.YEAR);
+        dateOfBirth.add(Calendar.YEAR, age);
+        if (today.before(dateOfBirth)) {
+            age--;
+        }
+        System.out.printf("Você tem %d anos", age);
+
         //Exercicio 12
         // Scanner dados = new Scanner(System.in);
         // System.out.print("Insira um número inteiro: ");
@@ -85,35 +110,35 @@ public class App {
         // System.out.printf("Média final do aluno: %.2f", mediaFinal);
 
         //Exercicio 14
-        Scanner dados = new Scanner(System.in);
-        System.out.println("Em \"Operação\" escreva uma das opções a seguir: somar, subtrair, multiplicar ou dividir");
-        System.out.print("Número 1: ");
-        double num1 = Double.parseDouble(dados.nextLine());
-        System.out.print("Número 2: ");
-        double num2 = Double.parseDouble(dados.nextLine());
-        System.out.print("Operação: ");
-        String operacao = dados.nextLine();
-        double resultado = 0;
-        boolean erro = false;
-        if (operacao.equals("somar")) {
-            resultado = num1 + num2;
-        } else if (operacao.equals("subtrair")) {
-            resultado = num1 - num2;
-        } else if (operacao.equals("multiplicar")) {
-            resultado = num1 * num2;
-        } else if (operacao.equals("dividir")) {
-            if (num2 > 0) {
-                resultado = num1 / num2;
-            } else {
-                erro = true;
-                System.out.print("Não é possível dividir por 0(zero).");
-            }
-        } else {
-            erro = true;
-            System.out.print("Operação não encontrada.");
-        }
-        if (!erro) {
-            System.out.printf("Média final do aluno: %.2f", resultado);
-        }
+        // Scanner dados = new Scanner(System.in);
+        // System.out.println("Em \"Operação\" escreva uma das opções a seguir: somar, subtrair, multiplicar ou dividir");
+        // System.out.print("Número 1: ");
+        // double num1 = Double.parseDouble(dados.nextLine());
+        // System.out.print("Número 2: ");
+        // double num2 = Double.parseDouble(dados.nextLine());
+        // System.out.print("Operação: ");
+        // String operacao = dados.nextLine();
+        // double resultado = 0;
+        // boolean erro = false;
+        // if (operacao.equals("somar")) {
+        //     resultado = num1 + num2;
+        // } else if (operacao.equals("subtrair")) {
+        //     resultado = num1 - num2;
+        // } else if (operacao.equals("multiplicar")) {
+        //     resultado = num1 * num2;
+        // } else if (operacao.equals("dividir")) {
+        //     if (num2 > 0) {
+        //         resultado = num1 / num2;
+        //     } else {
+        //         erro = true;
+        //         System.out.print("Não é possível dividir por 0(zero).");
+        //     }
+        // } else {
+        //     erro = true;
+        //     System.out.print("Operação não encontrada.");
+        // }
+        // if (!erro) {
+        //     System.out.printf("Média final do aluno: %.2f", resultado);
+        // }
     }
 }
