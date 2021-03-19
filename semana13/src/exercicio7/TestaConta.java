@@ -15,7 +15,9 @@ public class TestaConta {
 		System.out.println(String.format("O saldo em conta é %.2f%n", conta.verificaSaldo()));
 		
 		conta.sacar(126.53D);
-		System.out.println(String.format("O saldo em conta é %.2f", conta.verificaSaldo()));
+		System.out.println(String.format("O saldo em conta é %.2f%n%n", conta.verificaSaldo()));
+		
+		System.out.println(conta.recuperaDadosParaImpressao());
 	}
 
 }
