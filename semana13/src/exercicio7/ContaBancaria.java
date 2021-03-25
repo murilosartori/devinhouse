@@ -7,6 +7,13 @@ public class ContaBancaria {
 	double saldo;
 	double limite;
 	String dataAbertura;
+	private static int totalContas;
+	int identificador;
+	
+	public ContaBancaria() {
+		ContaBancaria.totalContas++;
+		this.identificador = totalContas;
+	}
 	
 	public boolean sacar(double valor) {
 		if (this.saldo >= valor) {
@@ -33,4 +40,9 @@ public class ContaBancaria {
         return String.format("Nome do Titular: %s%nConta: %d%nAgencia: %d%nSaldo: %.2f%nLimite: %.2f%nData Abertura: %s",
         					this.nomeDoTitular, this.numero, this.agencia, this.saldo, this.limite, this.dataAbertura);
     }
+	
+	//Exercicio 15
+	public int getIdentificador() {
+		return this.identificador;
+	}
 }
