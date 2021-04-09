@@ -45,4 +45,8 @@ public class ContaBancaria {
 	public int getIdentificador() {
 		return this.identificador;
 	}
+	
+	public String getTipo() {
+		return "Conta";
+	}
 }
