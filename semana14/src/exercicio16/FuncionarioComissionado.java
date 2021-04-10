@@ -38,7 +38,7 @@ public class FuncionarioComissionado extends Funcionario {
 
     @Override
     public String toString() {
-        return String.format("Nome: %s%nSobrenome: %s%nCPF: %s%nValor Venda Bruta: R$ %.2f%nTaxa Comissão: %.2f.", this.getNome(), this.getSobrenome(), this.getCPF(), this.vendasBrutas, this.taxaComissao * 100);
+        return String.format("Nome: %s%nSobrenome: %s%nCPF: %s%nValor Venda Bruta: R$ %.2f%nTaxa Comissão: %.2f", this.getNome(), this.getSobrenome(), this.getCPF(), this.vendasBrutas, this.taxaComissao * 100);
     }
 
     public double ganhos() {
