@@ -1,5 +1,5 @@
 package exercicio07;
 
-public class Tridimensional extends Forma {
-
+public abstract class Tridimensional extends Forma {
+	public abstract double getVolume();
 }

@@ -27,5 +27,6 @@ public class TesteConta {
 		conta2.limite = 50;
 		conta2.dataAbertura = "19/03/2021";
 		System.out.println(String.format("%nA conta2 é a de número: %d%n", conta2.getIdentificador()));
+		System.out.println(conta2.recuperaDadosParaImpressao());
 	}
 }

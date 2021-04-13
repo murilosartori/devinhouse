@@ -1,5 +1,5 @@
 package exercicio07;
 
-public class Forma {
-
+public abstract class Forma {
+	public abstract double getArea();
 }
