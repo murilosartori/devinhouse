@@ -44,4 +44,9 @@ public class FuncionarioComissionado extends Funcionario {
     public double ganhos() {
         return this.taxaComissao * this.vendasBrutas;
     }
+    
+    @Override
+    public double calcularSalarioMensal() {
+    	return this.getTaxaComissao() * this.getVendaBruta();
+    }
 }

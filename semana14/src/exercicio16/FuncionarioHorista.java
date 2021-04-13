@@ -44,4 +44,9 @@ public class FuncionarioHorista extends Funcionario {
     public String toString() {
         return String.format("Nome: %s%nSobrenome: %s%nCPF: %s%nHoras Trabalhadas: %.2f%nSalário (por hora): R$ %.2f", this.getNome(), this.getSobrenome(), this.getCPF(), this.horasTrabalhadas, this.salarioHora);
     }
+    
+    @Override
+    public double calcularSalarioMensal() {
+    	return this.getHorasTrabalhadas() * this.getSalarioHora();
+    }
 }

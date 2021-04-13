@@ -3,9 +3,9 @@ package exercicio16;
 public class TestaFuncionario {
 
 	public static void main(String[] args) {
-		Funcionario funcionario = new Funcionario("Carlos", "Alberto", "1");
-        System.out.println(funcionario.toString());
-        System.out.println("");
+		//Funcionario funcionario = new Funcionario("Carlos", "Alberto", "1");
+        //System.out.println(funcionario.toString());
+        //System.out.println("");
 
         FuncionarioComissionado comissionado = new FuncionarioComissionado("Alberto", "Roberto", "2", 50000, 0.5);
         System.out.println(comissionado.toString());

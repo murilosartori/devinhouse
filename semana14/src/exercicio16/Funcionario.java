@@ -1,6 +1,6 @@
 package exercicio16;
 
-public class Funcionario {
+public abstract class Funcionario {
 	private String nome;
     private String sobrenome;
     private String CPF;
@@ -36,4 +36,6 @@ public class Funcionario {
     public String toString() {
         return String.format("Nome: %s%nSobrenome: %s%nCPF: %s", this.nome, this.sobrenome, this.CPF);
     }
+    
+    public abstract double calcularSalarioMensal();
 }
