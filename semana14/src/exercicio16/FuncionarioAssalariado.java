@@ -3,8 +3,8 @@ package exercicio16;
 public class FuncionarioAssalariado extends Funcionario {
 	private double salario;
 
-    public FuncionarioAssalariado(String nome, String sobrenome, String CPF, double salario) {
-        super(nome, sobrenome, CPF);
+    public FuncionarioAssalariado(String nome, String sobrenome, String CPF, String nascimento, double salario) {
+        super(nome, sobrenome, CPF, nascimento);
         this.salario = salario;
     }
     

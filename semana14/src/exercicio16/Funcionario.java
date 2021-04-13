@@ -1,14 +1,19 @@
 package exercicio16;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public abstract class Funcionario {
 	private String nome;
     private String sobrenome;
     private String CPF;
+    private LocalDate nascimento;
 
-    public Funcionario(String nome, String sobrenome, String CPF) {
+    public Funcionario(String nome, String sobrenome, String CPF, String nascimento) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.CPF = CPF;
+        this.nascimento = parseNascimento(nascimento);
     }
     
     public String getNome() {
@@ -30,6 +35,16 @@ public abstract class Funcionario {
     }
     public void setCPF(String cpf) {
     	this.CPF = cpf;
+    }
+    
+    public LocalDate getNascimento() {
+    	return this.nascimento;
+    }
+    public void setNascimento(String data) {
+    	this.nascimento = parseNascimento(data);
+    }
+    private LocalDate parseNascimento(String data) {
+    	return LocalDate.parse(data, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
 
     @Override

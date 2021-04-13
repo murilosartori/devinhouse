@@ -4,8 +4,8 @@ public class FuncionarioComissionado extends Funcionario {
 	private double vendasBrutas;
     private double taxaComissao;
 
-    public FuncionarioComissionado(String nome, String sobrenome, String CPF, double vendasBrutas, double taxaComissao) {
-        super(nome, sobrenome, CPF);
+    public FuncionarioComissionado(String nome, String sobrenome, String CPF, String nascimento, double vendasBrutas, double taxaComissao) {
+        super(nome, sobrenome, CPF, nascimento);
         this.vendasBrutas = validaVendasBrutas(vendasBrutas);
         this.taxaComissao = validarTaxaComissao(taxaComissao);
     }
