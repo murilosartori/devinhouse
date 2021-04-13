@@ -36,9 +36,7 @@ public abstract class Conta {
 	}
 	
 	String recuperaDadosParaImpressao() {
-		return String.format("Tipo de Conta: %s", getTipo());
-        //return String.format("Nome do Titular: %s%nConta: %d%nAgencia: %d%nSaldo: %.2f%nLimite: %.2f%nData Abertura: %s",
-        				//	this.nomeDoTitular, this.numero, this.agencia, this.saldo, this.limite, this.dataAbertura);
+        return String.format("Nome do Titular: %s%nConta: %d%nAgencia: %d%nSaldo: %.2f%nLimite: %.2f%nData Abertura: %s", this.nomeDoTitular, this.numero, this.agencia, this.saldo, this.limite, this.dataAbertura);
     }
 	
 	public int getIdentificador() {
