@@ -38,5 +38,14 @@ public class TesteConta {
 		System.out.println("");
         System.out.println(seguro);
         System.out.println("Imposto Seguro: " + seguro.getValorImposto());
+        
+        Tributavel[] tributos = new Tributavel[2];
+        tributos[0] = conta;
+        tributos[1] = seguro;
+
+        ManipuladorDeTributaveis manipulador = new ManipuladorDeTributaveis();
+        manipulador.calculaImpostos(tributos);
+
+        System.out.printf("%n%nTotal de tributos: R$ %.2f", manipulador.getTotal());
 	}
 }
