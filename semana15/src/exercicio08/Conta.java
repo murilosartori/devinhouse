@@ -44,4 +44,9 @@ public abstract class Conta {
 	}
 	
 	public abstract String getTipo();
+	
+	@Override
+	public String toString() {
+		return this.recuperaDadosParaImpressao();
+	}
 }

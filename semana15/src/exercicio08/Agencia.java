@@ -13,4 +13,8 @@ public class Agencia {
     public int getQuantidadeDeContas() {
         return contas.size();
     }
+    
+    public Conta buscaPorTitular(String titular) {
+        return contas.stream().filter(c -> c.nomeDoTitular.equals(titular)).findFirst().orElse(null);
+    }
 }

@@ -49,7 +49,7 @@ public class TesteConta {
 //        System.out.printf("%n%nTotal de tributos: R$ %.2f", manipulador.getTotal());
 		
 		ContaCorrente conta = new ContaCorrente();
-		conta.nomeDoTitular = "Nome do Titular";
+		conta.nomeDoTitular = "Nome do Titular 1";
 		conta.numero = 1;
 		conta.agencia = 2;
 		conta.saldo = 100;
@@ -57,7 +57,7 @@ public class TesteConta {
 		conta.dataAbertura = "19/03/2021";
 		
 		ContaPoupanca conta2 = new ContaPoupanca();
-		conta2.nomeDoTitular = "Nome do Titular";
+		conta2.nomeDoTitular = "Nome do Titular 2";
 		conta2.numero = 1;
 		conta2.agencia = 2;
 		conta2.saldo = 100;
@@ -68,6 +68,7 @@ public class TesteConta {
 		agencia.adiciona(conta);
 		agencia.adiciona(conta2);
 		
-		System.out.printf("Total de contas: %d", agencia.getQuantidadeDeContas());
+		System.out.printf("Total de contas: %d%n%n", agencia.getQuantidadeDeContas());
+		System.out.println(agencia.buscaPorTitular("Nome do Titular 1"));
 	}
 }
